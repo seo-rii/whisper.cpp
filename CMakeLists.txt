@@ -40,6 +40,10 @@ if (EMSCRIPTEN)
     #       wasm-ld: error: --shared-memory is disallowed by whisper.cpp.o because it was not compiled with 'atomics' or 'bulk-memory' features.
     set(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   -pthread -s TOTAL_STACK=5242880")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread -s TOTAL_STACK=5242880")
+
+
+#    set(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   -s MODULARIZE=1 -s EXPORT_ES6=1 -pthread -s TOTAL_STACK=5242880")
+#    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s MODULARIZE=1 -s EXPORT_ES6=1 -pthread -s TOTAL_STACK=5242880")
 else()
     if (MINGW)
         set(BUILD_SHARED_LIBS_DEFAULT OFF)

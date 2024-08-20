@@ -7442,14 +7442,14 @@ static void whisper_exp_compute_token_level_timestamps_dtw(
     }
 
     // Print DTW timestamps
-    /*for (size_t i = i_segment; i < i_segment + n_segments; ++i) {
+    for (size_t i = i_segment; i < i_segment + n_segments; ++i) {
         auto & segment = state->result_all[i];
         for (auto &t: segment.tokens) {
             const char * tok = whisper_token_to_str(ctx, t.id);
             fprintf(stderr, "|%s|(%.2f) ", tok, (float)t.t_dtw/100);
         }
         fprintf(stderr, "\n");
-    }*/
+    }
 
     ggml_free(gctx);
 }
